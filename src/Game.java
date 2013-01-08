@@ -104,10 +104,12 @@ public class Game extends Canvas implements Runnable {
 	
 	public void update(){
 		key.update();
+		/*
 		if(key.up) y--;
 		if(key.down) y++;
 		if(key.left) x--;
 		if(key.right) x++;
+	*/
 	}
 	
 	public void render(){
