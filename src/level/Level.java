@@ -3,7 +3,7 @@ package level;
 import level.tile.Tile;
 import graphics.Screen;
 
-public class Level {
+public abstract class Level {
 
 	public int width, height;
 	public int[] tiles;
@@ -53,7 +53,9 @@ public class Level {
 	}
 	
 	public Tile getTile(int x, int y){
+		if(x < 0 || y < 0 || x >= width || y >= height ) return Tile.voidTile;
 		if(tiles[x+y*width] == 0) return Tile.grass;
+		if(tiles[x+y*width] == 1) return Tile.elevated;
 		return Tile.voidTile; 
 	}
 	

@@ -10,6 +10,8 @@ import java.util.logging.Level;
 
 import javax.swing.JFrame;
 
+import level.LevelOne;
+
 import graphics.Screen;
 
 
@@ -29,7 +31,8 @@ public class Game extends Canvas implements Runnable {
 	private BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 	private int[] pixels = ((DataBufferInt)image.getRaster().getDataBuffer()).getData();
 	private Screen screen;
-	private Level level;
+	//private Level level;
+	private LevelOne level;
 	private Keyboard key;
 	
 	public Game(){
