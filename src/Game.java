@@ -10,6 +10,8 @@ import java.util.logging.Level;
 
 import javax.swing.JFrame;
 
+import entity.Player;
+
 import level.LevelOne;
 
 import graphics.Screen;
@@ -34,6 +36,7 @@ public class Game extends Canvas implements Runnable {
 	//private Level level;
 	private LevelOne level;
 	private Keyboard key;
+	private Player player;
 	
 	public Game(){
 		Dimension size = new Dimension(width * scale, height * scale);
@@ -43,6 +46,7 @@ public class Game extends Canvas implements Runnable {
 		frame = new JFrame();		
 		key = new Keyboard();
 		level = new LevelOne(64, 64);
+		player = new Player(key);
 		
 		addKeyListener(key);
 	}
@@ -104,12 +108,8 @@ public class Game extends Canvas implements Runnable {
 	
 	public void update(){
 		key.update();
-		/*
-		if(key.up) y--;
-		if(key.down) y++;
-		if(key.left) x--;
-		if(key.right) x++;
-	*/
+		player.update();
+
 	}
 	
 	public void render(){
