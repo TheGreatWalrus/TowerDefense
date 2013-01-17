@@ -34,7 +34,7 @@ public class Game extends Canvas implements Runnable {
 	private int[] pixels = ((DataBufferInt)image.getRaster().getDataBuffer()).getData();
 	private Screen screen;
 	//private Level level;
-	private LevelOne level;
+	private Level level;
 	private Keyboard key;
 	private Player player;
 	
@@ -45,7 +45,7 @@ public class Game extends Canvas implements Runnable {
 		screen = new Screen(width, height);		
 		frame = new JFrame();		
 		key = new Keyboard();
-		level = new LevelOne(64, 64);
+		level = new Level(64, 64);
 		player = new Player(key);
 		
 		addKeyListener(key);

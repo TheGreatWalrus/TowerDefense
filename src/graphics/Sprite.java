@@ -11,6 +11,8 @@ public class Sprite {
 	public static Sprite elevated = new Sprite(16, 1, 0, SpriteSheet.tiles);
 	public static Sprite floor = new Sprite(16, 2, 0, SpriteSheet.tiles);
 	public static Sprite voidSprite = new Sprite(16, 0xffffff);
+	public static Sprite roach_forward1 = new Sprite(16, 2, 1, SpriteSheet.tiles);
+	public static Sprite roach_forward2 = new Sprite(16, 3, 1, SpriteSheet.tiles);
 	
 	public Sprite(int size, int x, int y, SpriteSheet sheet){
 		SIZE = size;

@@ -3,7 +3,7 @@ package level;
 import level.tile.Tile;
 import graphics.Screen;
 
-public abstract class Level {
+public class Level {
 
 	public int width, height;
 	public int[] tiles;
@@ -19,15 +19,14 @@ public abstract class Level {
 		loadLevel(path);
 	}
 	
-	private void generateLevel(){
+	protected void generateLevel(){
 		
 	}
 	
-	private void loadLevel(String path){
+	protected void loadLevel(String path){
 		
 	}
-	
-	
+		
 	public void update() {
 		
 	}
